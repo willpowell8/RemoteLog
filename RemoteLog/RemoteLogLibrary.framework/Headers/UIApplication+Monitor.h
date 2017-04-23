@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIApplication (RemoteLog)
+@interface UIApplication (RemoteLogMonitor)
 
 @end

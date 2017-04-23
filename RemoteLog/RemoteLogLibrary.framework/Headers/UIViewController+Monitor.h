@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (RemoteLog)
+@interface UIViewController (RemoteLogMonitor)
 
 
 @end

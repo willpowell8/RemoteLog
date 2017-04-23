@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char RemoteLogLibraryVersionString[];
 
 
 #import "UIViewController+Monitor.h"
+#import "UIApplication+Monitor.h"

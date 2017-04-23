@@ -1,0 +1,10 @@
+framework module RemoteLogLibrary {
+  umbrella header "RemoteLogLibrary.h"
+
+  export *
+  module * { export * }
+}
+
+module RemoteLogLibrary.Swift {
+    header "RemoteLogLibrary-Swift.h"
+}
