@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'RemoteLog'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of RemoteLog.'
+  s.version          = '1.0.0'
+    s.summary          = 'Logging and support remotely to support your users and testers. Rapid bug detection and real journey reporting covering network, console, ui screenshots, tap and touch event logging and debugging'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Remote logging provides an app provider a unique way of being able to improve testing reporting, realtime customer app support and remote live bug detection and bug fixing. RemoteLog provides a stream of events and even screenshots when activated by the user. This stream covers console printing, network requests, ui screenshot events when changing view controllers or touching buttons. Tap and touch events. And the device you are examining can be anywhere in the world.
                        DESC
 
   s.homepage         = 'https://github.com/willpowell8/RemoteLog'
@@ -12,7 +12,7 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'willpowell8' => 'willpowell8@gmail.com' }
   s.source           = { :git => 'https://github.com/willpowell8/RemoteLog.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/willpowelluk'
+  s.social_media_url = 'https://twitter.com/willpowelluk'
 
   s.ios.deployment_target = '8.3'
   s.vendored_frameworks = 'RemoteLog/RemoteLogLibrary.framework'
