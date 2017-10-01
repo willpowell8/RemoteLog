@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RemoteLogLibrary
 
 class ViewController: UIViewController {
     
@@ -28,7 +27,7 @@ class ViewController: UIViewController {
     
     @objc public func updateRemote(_ notification:Notification){
         DispatchQueue.main.async {
-            self.deviceLabel.text = RemoteLog.uuid
+            //self.deviceLabel.text = RemoteLog.uuid
         }
     }
     
@@ -53,7 +52,6 @@ class ViewController: UIViewController {
     
     @IBAction func testNetworkPrint(){
          let configuration = URLSessionConfiguration.default
-         RemoteLog.network(session: configuration)
          let session = URLSession(configuration: configuration)
          
          guard let url = URL(string: "http://httpbin.org/headers") else {return}

@@ -16,6 +16,3 @@ FOUNDATION_EXPORT const unsigned char RemoteLogLibraryVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <RemoteLogLibrary/PublicHeader.h>
 
-
-#import "UIViewController+Monitor.h"
-#import "UIApplication+Monitor.h"
