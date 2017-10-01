@@ -44,6 +44,7 @@
 		607FACE51AFB9204008FA782 /* RemoteLog_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteLog_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		815D49B41F814C4B00CAF522 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		8176DCD41EA52E0D00C0FBFF /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		81A3A4E61EACEA9A00E5AEE1 /* SecondaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryViewController.swift; sourceTree = "<group>"; };
 		A2D83BB27B703A4D8AACC5FC /* Pods_RemoteLog_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteLog_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +153,7 @@
 				31ED54367362FAB080DA1A38 /* RemoteLog.podspec */,
 				C4993DB63A7B94AF120D2BEA /* README.md */,
 				4C5A9172F20C09EB5041B4CE /* LICENSE */,
+				815D49B41F814C4B00CAF522 /* CHANGELOG.md */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";

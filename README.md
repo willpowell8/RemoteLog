@@ -11,10 +11,8 @@ This quick and easy to use framework allows you to connect remotely to a device 
 Any print events written within the application will be fed to the remote logging framework.
 ##### Network request
 Any request made within the application will be logged as far as URL, duration etc. to make it easy to see what is going on from a network stance.
-##### User Button Touch Event
+##### Touch Event
 RemoteLog inteligently works out what is happening within app and we are building out events monitoring for components. RemoteLog monitors the events from buttons so if a user touches up on a screen and there is an attached event the application will take a screenshot and record the touch events for the application and report it as a single event to the support user.
-##### View Controller Appear
-One of the biggest events of an application is when the view controller changes. Therefore RemoteLog inteligently understands these events and can relay screenshots to support.
 ## Sample User Journey
 RemoteLog is not designed to be on permanently, but is designed to find out what is going wrong for a user and what the user can see during testing or production deployment.
 - User is within app and comes across issue
