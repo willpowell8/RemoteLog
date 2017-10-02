@@ -477,9 +477,6 @@ typedef SWIFT_ENUM(NSInteger, SocketIOClientStatus) {
 };
 
 
-@interface UIApplication (SWIFT_EXTENSION(RemoteLogLibrary))
-+ (void)initialize;
-@end
 
 
 @interface UIDevice (SWIFT_EXTENSION(RemoteLogLibrary))
@@ -487,9 +484,6 @@ typedef SWIFT_ENUM(NSInteger, SocketIOClientStatus) {
 @end
 
 
-@interface UIViewController (SWIFT_EXTENSION(RemoteLogLibrary))
-+ (void)initialize;
-@end
 
 
 
