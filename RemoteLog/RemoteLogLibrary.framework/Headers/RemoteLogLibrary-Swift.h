@@ -223,8 +223,11 @@ SWIFT_CLASS("_TtC16RemoteLogLibrary9RemoteLog")
 @interface RemoteLog : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RemoteLog * _Nonnull context;)
 + (RemoteLog * _Nonnull)context SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic) NSInteger maxAllEventBuffer;
+@property (nonatomic) NSInteger maxUIEventBuffer;
 @property (nonatomic) BOOL localDebugEnabled;
 @property (nonatomic) BOOL remoteDebugEnabled;
+- (void)exportUIBufferPDF:(void (^ _Nonnull)(NSString * _Nonnull))completion;
 - (void)setup;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
