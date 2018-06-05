@@ -228,6 +228,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RemoteLog * 
 @property (nonatomic) BOOL profilingNetwork;
 @property (nonatomic) BOOL localDebugEnabled;
 @property (nonatomic) BOOL remoteDebugEnabled;
+- (void)exportTechPDF:(NSDictionary<NSString *, NSString *> * _Nullable)additionalInfo completion:(void (^ _Nonnull)(NSString * _Nullable))completion;
 - (void)exportUIBufferPDF:(void (^ _Nonnull)(NSString * _Nullable))completion excludeLastXEvents:(NSInteger)excludeLastXEvents;
 - (void)setup;
 - (void)resetNetworkProfileStats;
