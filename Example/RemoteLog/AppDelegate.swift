@@ -9,6 +9,13 @@
 import UIKit
 import RemoteLogLibrary
 
+public func print(_ items: Any...) {
+    RemoteLogConsole.log(items, level: .verbose)
+    if let first = items.first {
+        Swift.print(first)
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
