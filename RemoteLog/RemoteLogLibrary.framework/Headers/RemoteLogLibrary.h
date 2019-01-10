@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "http_parser.h"
+#import "GCDAsyncUdpSocket.h"
+#import "GCDAsyncSocket.h"
 //! Project version number for RemoteLogLibrary.
 FOUNDATION_EXPORT double RemoteLogLibraryVersionNumber;
 

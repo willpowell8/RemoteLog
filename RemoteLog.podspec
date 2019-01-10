@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RemoteLog'
-  s.version          = '4.2.1'
+  s.version          = '4.2.2'
     s.summary          = 'Logging and support remotely for iOS app. See users & testers real journeys, network log, console, ui screenshots, and their screen touches'
 
   s.description      = <<-DESC

@@ -166,8 +166,11 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import Dispatch;
 @import Foundation;
 @import ObjectiveC;
+@import Security;
 @import UIKit;
 #endif
+
+#import <RemoteLogLibrary/RemoteLogLibrary.h>
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
@@ -184,6 +187,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+
+
+
+
+
+
 @class NSStream;
 
 SWIFT_CLASS("_TtC16RemoteLogLibrary16FoundationStream")
@@ -192,6 +201,24 @@ SWIFT_CLASS("_TtC16RemoteLogLibrary16FoundationStream")
 - (void)stream:(NSStream * _Nonnull)aStream handleEvent:(NSStreamEvent)eventCode;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+
+
+SWIFT_CLASS("_TtC16RemoteLogLibrary12URLEmulation")
+@interface URLEmulation : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC16RemoteLogLibrary16HTTPURLEmulation")
+@interface HTTPURLEmulation : URLEmulation
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
 
 
 
@@ -944,6 +971,43 @@ SWIFT_CLASS("_TtC16RemoteLogLibrary13SocketRawView")
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC16RemoteLogLibrary11TCPListener")
+@interface TCPListener : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+@interface TCPListener (SWIFT_EXTENSION(RemoteLogLibrary)) <GCDAsyncSocketDelegate>
+/// Raised when the socket accepts a new incoming client socket.
+- (void)socket:(GCDAsyncSocket * _Nonnull)sock didAcceptNewSocket:(GCDAsyncSocket * _Nonnull)newSocket;
+/// Raised when the socket disconnects.
+- (void)socketDidDisconnect:(GCDAsyncSocket * _Nonnull)sock withError:(NSError * _Nullable)err;
+@end
+
+
+SWIFT_CLASS("_TtC16RemoteLogLibrary9TCPSocket")
+@interface TCPSocket : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+
+
+@interface TCPSocket (SWIFT_EXTENSION(RemoteLogLibrary)) <GCDAsyncSocketDelegate>
+/// Raised when the socket has connected to the host.
+- (void)socket:(GCDAsyncSocket * _Nonnull)sock didConnectToHost:(NSString * _Nonnull)host port:(uint16_t)port;
+/// Raised when the socket has disconnected from the host.
+- (void)socketDidDisconnect:(GCDAsyncSocket * _Nonnull)sock withError:(NSError * _Nullable)err;
+/// Raised when the socket is done reading data.
+- (void)socket:(GCDAsyncSocket * _Nonnull)sock didReadData:(NSData * _Nonnull)data withTag:(NSInteger)tag;
+/// Raised when the socket is done writing data.
+- (void)socket:(GCDAsyncSocket * _Nonnull)sock didWriteDataWithTag:(NSInteger)tag;
+/// Raised when the socket is asking to evaluate the trust as part of the TLS handshake.
+- (void)socket:(GCDAsyncSocket * _Nonnull)sock didReceiveTrust:(SecTrustRef _Nonnull)trust completionHandler:(void (^ _Nonnull)(BOOL))completionHandler;
+@end
 
 
 
