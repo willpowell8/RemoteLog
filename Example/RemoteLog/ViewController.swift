@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     var timer = Timer()
     
     
-    func tick() {
+    @objc func tick() {
         self.dateLabel.text = DateFormatter.localizedString(from: Date(), dateStyle: .none,
                                                                         timeStyle: .medium)
     }
