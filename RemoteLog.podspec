@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RemoteLog'
-  s.version          = '5.2.3'
+  s.version          = '6.0.0'
     s.summary          = 'Logging and support remotely for iOS app. See users & testers real journeys, network log, console, ui screenshots, and their screen touches'
 
   s.description      = <<-DESC
@@ -14,6 +14,6 @@ Remote logging provides an app provider a unique way of being able to improve te
   s.source           = { :git => 'https://github.com/willpowell8/RemoteLog.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/willpowelluk'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
   s.vendored_frameworks = 'RemoteLog/RemoteLogLibrary.framework'
 end
